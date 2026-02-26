@@ -1,10 +1,12 @@
-:root {
+﻿:root {
     --void: #08080A;
     --carbon: #111110;
     --smoke: #1A1A18;
     --ash: #2A2A27;
     --gold: #C8A45A;
     --gold-dim: #8A6E3A;
+    --brand-red: #c20e2d;
+    --brand-red-dim: #8a0b20;
     --ivory: #F2EDE4;
     --stone: #7A756C;
     --mist: #4A4540;

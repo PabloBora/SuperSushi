@@ -25,7 +25,9 @@ export default function Portal({ onEnter }: PortalProps) {
     return (
         <div className={clsx(styles.portal, portalExit && styles.exit)}>
             <div className={styles.portalGrain} />
-            <div className={styles.portalLogo}>Super Sushi</div>
+            <div className={styles.portalLogo}>
+                <img src="/ss logo-01.jpg.jpeg" alt="Super Sushi Logo" style={{ width: 'auto', height: 'auto', maxWidth: '85vw', maxHeight: '35vh', objectFit: 'contain', zIndex: 10, position: 'relative' }} />
+            </div>
             <div className={styles.portalSub}>Japanese Fusion · Monclova, Coahuila</div>
             <button className={styles.portalEnter} onClick={enterPortal}>
                 Ingresar al Restaurante

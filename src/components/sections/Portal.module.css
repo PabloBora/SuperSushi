@@ -1,4 +1,4 @@
-.portal {
+﻿.portal {
     position: fixed;
     inset: 0;
     z-index: 1000;
@@ -36,7 +36,7 @@
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    background: linear-gradient(90deg, transparent, var(--brand-red), transparent);
     transform: scaleX(0);
     animation: lineExpand 1s ease 1.5s forwards;
 }
@@ -57,7 +57,7 @@
     font-family: var(--font-montserrat), 'Montserrat', sans-serif;
     font-size: 0.75rem;
     letter-spacing: 0.6em;
-    color: var(--gold-dim);
+    color: var(--brand-red-dim);
     text-transform: uppercase;
     cursor: pointer;
     opacity: 0;
@@ -73,16 +73,16 @@
     content: '';
     position: absolute;
     inset: 0;
-    border: 1px solid rgba(200, 164, 90, 0.2);
+    border: 1px solid rgba(194, 14, 45, 0.2);
     transition: border-color 0.4s, transform 0.4s;
 }
 
 .portalEnter:hover {
-    color: var(--gold);
+    color: var(--brand-red);
 }
 
 .portalEnter:hover::before {
-    border-color: rgba(200, 164, 90, 0.6);
+    border-color: var(--brand-red);
     transform: scale(0.96);
 }
 

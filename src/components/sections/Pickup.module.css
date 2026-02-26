@@ -1,0 +1,188 @@
+.pickupSection {
+    min-height: 90vh;
+    background: var(--void);
+    padding: 10rem 8rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid rgba(194, 14, 45, 0.08);
+    /* Separation line */
+}
+
+.pickupGrid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 6rem;
+    align-items: center;
+    width: 100%;
+}
+
+.pickupLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.pickupTag {
+    font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: var(--ivory);
+    border: 1px solid rgba(242, 237, 228, 0.2);
+    border-radius: 100px;
+    padding: 0.5rem 1.2rem;
+    margin-bottom: 3rem;
+    display: inline-block;
+}
+
+.pickupLogo {
+    height: 48px;
+    margin-bottom: 3rem;
+}
+
+.pickupLogo img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+.pickupTitle {
+    font-size: clamp(2.5rem, 3.5vw, 4rem);
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--ivory);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
+}
+
+.pickupTitle em {
+    font-style: italic;
+    color: var(--brand-red);
+}
+
+.pickupDesc {
+    font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    color: var(--stone);
+    line-height: 1.7;
+    margin-bottom: 3rem;
+    max-width: 26rem;
+}
+
+.pickupActions {
+    margin-bottom: 2rem;
+}
+
+.pickupBtn {
+    font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--ivory);
+    background: var(--brand-red);
+    border: none;
+    border-radius: 100px;
+    padding: 1rem 2.8rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    box-shadow: 0 4px 14px rgba(194, 14, 45, 0.2);
+}
+
+.pickupBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(194, 14, 45, 0.4);
+    filter: brightness(1.1);
+}
+
+.pickupAvailability {
+    font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    color: var(--mist);
+}
+
+.pickupRight {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.mockupContainer {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    background: linear-gradient(135deg, rgba(8, 8, 10, 0) 0%, rgba(20, 20, 30, 0.3) 100%);
+    border-radius: 24px;
+    padding: 2px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.mockupContainer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 80% 20%, rgba(194, 14, 45, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.mockupInner {
+    width: 100%;
+    height: 100%;
+    background: #1A1F2B;
+    /* Dark bluish tint to match reference image */
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.photoPlaceholder {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--stone);
+    font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+.photoIcon {
+    font-size: 1.2rem;
+}
+
+/* REVEAL ANIMATION */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.revealDelay1 {
+    transition-delay: 0.2s;
+}
+
+@media (max-width: 1024px) {
+    .pickupSection {
+        padding: 6rem 3rem;
+    }
+
+    .pickupGrid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .pickupTitle {
+        font-size: 2.2rem;
+    }
+
+    .mockupContainer {
+        aspect-ratio: 4/3;
+    }
+}

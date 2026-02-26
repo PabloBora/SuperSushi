@@ -18,7 +18,6 @@ function MenuItem({ item, index }: { item: MenuItemType; index: number }) {
         >
             <div className={styles.menuItemHeader}>
                 <span className={styles.menuItemName}>{item.name}</span>
-                <span className={styles.menuItemPrice}>{item.price}</span>
             </div>
             <p className={styles.menuItemDesc}>{item.desc}</p>
             {item.tag && <span className={styles.menuItemTag}>{item.tag}</span>}
@@ -27,7 +26,7 @@ function MenuItem({ item, index }: { item: MenuItemType; index: number }) {
 }
 
 export default function MenuSection() {
-    const [activeTab, setActiveTab] = useState("Omakase");
+    const [activeTab, setActiveTab] = useState(Object.keys(menuData)[0]);
 
     const { ref: refLabel, visible: visibleLabel } = useReveal();
     const { ref: refTitle, visible: visibleTitle } = useReveal();

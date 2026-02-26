@@ -6,7 +6,9 @@ import styles from './Footer.module.css';
 export default function Footer() {
     return (
         <footer className={styles.footer}>
-            <div className={styles.footerLogo}>Super Sushi</div>
+            <div className={styles.footerLogo}>
+                <img src="/ss logo-01.jpg.jpeg" alt="Super Sushi Logo" style={{ height: '64px', width: 'auto', objectFit: 'contain' }} />
+            </div>
             <ul className={styles.footerLinks}>
                 <li><a onClick={() => scrollTo('manifesto')}>Filosofía</a></li>
                 <li><a onClick={() => scrollTo('menu')}>Menú</a></li>

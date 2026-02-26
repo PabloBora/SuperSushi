@@ -1,10 +1,10 @@
-.footer {
+﻿.footer {
     background: var(--carbon);
     padding: 5rem 8rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid rgba(200, 164, 90, 0.08);
+    border-top: 1px solid rgba(194, 14, 45, 0.08);
 }
 
 .footerLogo {
@@ -40,7 +40,7 @@
 }
 
 .footerLinks a:hover {
-    color: var(--gold);
+    color: var(--brand-red);
 }
 
 @media (max-width: 1024px) {

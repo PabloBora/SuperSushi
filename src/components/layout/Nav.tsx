@@ -16,10 +16,13 @@ export default function Nav() {
 
     return (
         <nav className={clsx(styles.nav, navScrolled && styles.scrolled)}>
-            <div className={styles.navLogo}>Super Sushi</div>
+            <div className={styles.navLogo}>
+                <img src="/ss logo-01.jpg.jpeg" alt="Super Sushi Logo" style={{ height: '42px', width: 'auto', objectFit: 'contain' }} />
+            </div>
             <ul className={styles.navLinks}>
                 <li><a onClick={() => scrollTo('manifesto')}>Filosofía</a></li>
                 <li><a onClick={() => scrollTo('menu')}>Menú</a></li>
+                <li><a onClick={() => scrollTo('pickup')}>Pick-up</a></li>
                 <li><a onClick={() => scrollTo('reservacion')}>Reservación</a></li>
             </ul>
             <button className={styles.navReserve} onClick={() => scrollTo('reservacion')}>

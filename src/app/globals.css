@@ -1,6 +1,7 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 @import "../styles/tokens.css";
 
+html,
 body {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;

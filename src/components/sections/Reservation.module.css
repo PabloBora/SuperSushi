@@ -1,4 +1,4 @@
-.reservation {
+﻿.reservation {
     min-height: 80vh;
     background: var(--void);
     display: flex;
@@ -13,7 +13,7 @@
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(200, 164, 90, 0.2), transparent);
+    background: linear-gradient(90deg, transparent, rgba(194, 14, 45, 0.2), transparent);
 }
 
 .reservationLeft {
@@ -22,7 +22,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-right: 1px solid rgba(200, 164, 90, 0.08);
+    border-right: 1px solid rgba(194, 14, 45, 0.08);
 }
 
 .reservationRight {
@@ -37,7 +37,7 @@
     font-family: var(--font-montserrat), 'Montserrat', sans-serif;
     font-size: 0.7rem;
     letter-spacing: 0.7em;
-    color: var(--gold-dim);
+    color: var(--brand-red-dim);
     text-transform: uppercase;
     margin-bottom: 3rem;
     display: flex;
@@ -49,7 +49,7 @@
     content: '';
     width: 2rem;
     height: 1px;
-    background: var(--gold-dim);
+    background: var(--brand-red-dim);
 }
 
 .reservationTitle {
@@ -62,7 +62,7 @@
 
 .reservationTitle em {
     font-style: italic;
-    color: var(--gold);
+    color: var(--brand-red);
 }
 
 .manifestoBody {
@@ -91,7 +91,7 @@
     font-family: var(--font-montserrat), 'Montserrat', sans-serif;
     font-size: 0.75rem;
     letter-spacing: 0.5em;
-    color: var(--gold-dim);
+    color: var(--brand-red-dim);
     text-transform: uppercase;
     min-width: 5rem;
 }
@@ -133,7 +133,7 @@
 .formInput {
     background: none;
     border: none;
-    border-bottom: 1px solid rgba(200, 164, 90, 0.15);
+    border-bottom: 1px solid rgba(194, 14, 45, 0.15);
     color: var(--ivory);
     font-family: var(--font-cormorant), 'Cormorant Garamond', serif;
     font-size: 1.1rem;
@@ -146,7 +146,7 @@
 }
 
 .formInput:focus {
-    border-color: var(--gold);
+    border-color: var(--brand-red);
 }
 
 .formInput::placeholder {
@@ -156,7 +156,7 @@
 .formSelect {
     background: none;
     border: none;
-    border-bottom: 1px solid rgba(200, 164, 90, 0.15);
+    border-bottom: 1px solid rgba(194, 14, 45, 0.15);
     color: var(--ivory);
     font-family: var(--font-cormorant), 'Cormorant Garamond', serif;
     font-size: 1.1rem;
@@ -169,7 +169,7 @@
 }
 
 .formSelect:focus {
-    border-color: var(--gold);
+    border-color: var(--brand-red);
 }
 
 .formSelect option {
@@ -181,8 +181,8 @@
     width: 100%;
     padding: 1.2rem;
     background: transparent;
-    border: 1px solid rgba(200, 164, 90, 0.3);
-    color: var(--gold);
+    border: 1px solid rgba(194, 14, 45, 0.3);
+    color: var(--brand-red);
     font-family: var(--font-montserrat), 'Montserrat', sans-serif;
     font-size: 0.75rem;
     letter-spacing: 0.6em;
@@ -193,9 +193,9 @@
 }
 
 .formSubmit:hover {
-    background: var(--gold);
-    color: var(--void);
-    border-color: var(--gold);
+    background: var(--brand-red);
+    color: var(--ivory);
+    border-color: var(--brand-red);
 }
 
 .formSuccess {
@@ -206,13 +206,13 @@
 .formSuccessIcon {
     width: 48px;
     height: 48px;
-    border: 1px solid var(--gold-dim);
+    border: 1px solid var(--brand-red-dim);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 2rem;
-    color: var(--gold);
+    color: var(--brand-red);
     font-size: 1.2rem;
 }
 
@@ -268,6 +268,6 @@
 
     .reservationLeft {
         border-right: none;
-        border-bottom: 1px solid rgba(200, 164, 90, 0.08);
+        border-bottom: 1px solid rgba(194, 14, 45, 0.08);
     }
 }

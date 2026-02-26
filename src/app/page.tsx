@@ -7,6 +7,7 @@ import Nav from '@/components/layout/Nav';
 import Hero from '@/components/sections/Hero';
 import Manifesto from '@/components/sections/Manifesto';
 import MenuSection from '@/components/sections/MenuSection';
+import Pickup from '@/components/sections/Pickup';
 import Reservation from '@/components/sections/Reservation';
 import Footer from '@/components/layout/Footer';
 
@@ -23,6 +24,7 @@ export default function HomePage() {
         <Hero />
         <Manifesto />
         <MenuSection />
+        <Pickup />
         <Reservation />
       </main>
       <Footer />

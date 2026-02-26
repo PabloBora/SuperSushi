@@ -1,4 +1,4 @@
-.nav {
+﻿.nav {
     position: fixed;
     top: 0;
     left: 0;
@@ -16,7 +16,7 @@
     background: rgba(8, 8, 10, 0.85);
     backdrop-filter: blur(20px);
     padding: 1.2rem 4rem;
-    border-bottom: 1px solid rgba(200, 164, 90, 0.08);
+    border-bottom: 1px solid rgba(194, 14, 45, 0.08);
 }
 
 .navLogo {
@@ -45,7 +45,7 @@
 }
 
 .navLinks a:hover {
-    color: var(--gold);
+    color: var(--brand-red);
 }
 
 .navReserve {
@@ -53,17 +53,18 @@
     font-size: 0.75rem;
     letter-spacing: 0.4em;
     text-transform: uppercase;
-    color: var(--gold);
+    color: var(--brand-red);
     background: none;
-    border: 1px solid rgba(200, 164, 90, 0.3);
+    border: 1px solid rgba(194, 14, 45, 0.3);
     padding: 0.7rem 1.5rem;
     cursor: pointer;
     transition: all 0.3s;
 }
 
 .navReserve:hover {
-    background: rgba(200, 164, 90, 0.1);
-    border-color: var(--gold);
+    background: var(--brand-red);
+    color: var(--ivory);
+    border-color: var(--brand-red);
 }
 
 @media (max-width: 1024px) {
