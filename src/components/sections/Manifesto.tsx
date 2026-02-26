@@ -52,21 +52,19 @@ export default function Manifesto() {
                         ref={refHeadline as any}
                         className={clsx(styles.manifestoHeadline, styles.reveal, styles.revealDelay1, visibleHeadline && styles.visible)}
                     >
-                        La <em>pureza</em><br />
-                        es la forma<br />
-                        más alta del arte
+                        Amamos<br />
+                        lo que<br />
+                        <em>hacemos</em>
                     </h2>
                     <p
                         ref={refBody as any}
                         className={clsx(styles.manifestoBody, styles.reveal, styles.revealDelay2, visibleBody && styles.visible)}
                     >
-                        En Super Sushi creemos que la excelencia no se encuentra en
-                        la complejidad, sino en la claridad. Cada ingrediente habla
-                        por sí mismo; nuestra labor es crear el silencio adecuado
-                        para que lo escuches.
+                        Combinamos ingredientes de origen japonés con ingredientes
+                        asiáticos y méxico-americanos para elaborar recetas exclusivas.
                         <br /><br />
-                        Trabajamos directamente con los mercados de Tsukiji y Toyosu,
-                        seleccionando cada pieza a mano. Sin intermediarios. Sin compromiso.
+                        Utilizamos pescados y mariscos frescos del Pacífico para
+                        crear el auténtico concepto <em>Japanese Fusion</em>.
                     </p>
                 </div>
 

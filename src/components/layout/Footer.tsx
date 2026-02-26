@@ -11,6 +11,8 @@ export default function Footer() {
                 <li><a onClick={() => scrollTo('manifesto')}>Filosofía</a></li>
                 <li><a onClick={() => scrollTo('menu')}>Menú</a></li>
                 <li><a onClick={() => scrollTo('reservacion')}>Reservaciones</a></li>
+                <li><a href="https://www.facebook.com/SuperSushiMx" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                <li><a href="https://www.instagram.com/supersushimva/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
             </ul>
             <p className={styles.footerCopy}>© 2026 Super Sushi · Todos los derechos reservados</p>
         </footer>

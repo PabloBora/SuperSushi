@@ -29,10 +29,10 @@ export default function Reservation() {
     };
 
     const infoItems = [
-        { label: "Horario", val: "Mar–Dom\n13:00 – 23:00 hrs" },
-        { label: "Teléfono", val: "+52 55 1234 5678" },
-        { label: "Dirección", val: "Polanco, CDMX\nMéxico" },
-        { label: "Dress Code", val: "Smart Casual" },
+        { label: "Horario", val: "Lunes – Domingo\n12:00 – 23:00 hrs" },
+        { label: "Teléfono", val: "866 170 02 89" },
+        { label: "Santa Mónica", val: "Nogal #407, C.P. 25720\nMonclova, Coahuila" },
+        { label: "Sucursal", val: "Paseo Monclova\nLocal F-01" },
     ];
 
     return (
@@ -157,7 +157,7 @@ function ReservationForm({
                         required
                     >
                         <option value="">Seleccionar</option>
-                        {["13:00", "14:00", "15:00", "19:00", "20:00", "21:00", "22:00"].map(t => (
+                        {["12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00"].map(t => (
                             <option key={t} value={t}>{t} hrs</option>
                         ))}
                     </select>
