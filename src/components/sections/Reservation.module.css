@@ -1,0 +1,273 @@
+.reservation {
+    min-height: 80vh;
+    background: var(--void);
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.reservation::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(200, 164, 90, 0.2), transparent);
+}
+
+.reservationLeft {
+    width: 45%;
+    padding: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid rgba(200, 164, 90, 0.08);
+}
+
+.reservationRight {
+    flex: 1;
+    padding: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sectionLabel {
+    font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.7em;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.sectionLabel::before {
+    content: '';
+    width: 2rem;
+    height: 1px;
+    background: var(--gold-dim);
+}
+
+.reservationTitle {
+    font-size: clamp(2.5rem, 3.5vw, 5rem);
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 2rem;
+}
+
+.reservationTitle em {
+    font-style: italic;
+    color: var(--gold);
+}
+
+.manifestoBody {
+    font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.9;
+    color: var(--stone);
+    letter-spacing: 0.05em;
+    max-width: 36rem;
+}
+
+.reservationInfo {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.infoRow {
+    display: flex;
+    gap: 1.5rem;
+    align-items: baseline;
+}
+
+.infoLabel {
+    font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.5em;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    min-width: 5rem;
+}
+
+.infoVal {
+    font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    color: var(--stone);
+    line-height: 1.9;
+}
+
+.formStep {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.formRow {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.formGroup {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.formLabel {
+    font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    color: var(--mist);
+}
+
+.formInput {
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgba(200, 164, 90, 0.15);
+    color: var(--ivory);
+    font-family: var(--font-cormorant), 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    padding: 0.7rem 0;
+    width: 100%;
+    transition: border-color 0.3s;
+    outline: none;
+    cursor: text;
+}
+
+.formInput:focus {
+    border-color: var(--gold);
+}
+
+.formInput::placeholder {
+    color: var(--ash);
+}
+
+.formSelect {
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgba(200, 164, 90, 0.15);
+    color: var(--ivory);
+    font-family: var(--font-cormorant), 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    padding: 0.7rem 0;
+    width: 100%;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.formSelect:focus {
+    border-color: var(--gold);
+}
+
+.formSelect option {
+    background: var(--carbon);
+    color: var(--ivory);
+}
+
+.formSubmit {
+    width: 100%;
+    padding: 1.2rem;
+    background: transparent;
+    border: 1px solid rgba(200, 164, 90, 0.3);
+    color: var(--gold);
+    font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.6em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.4s;
+    margin-top: 1rem;
+}
+
+.formSubmit:hover {
+    background: var(--gold);
+    color: var(--void);
+    border-color: var(--gold);
+}
+
+.formSuccess {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.formSuccessIcon {
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--gold-dim);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem;
+    color: var(--gold);
+    font-size: 1.2rem;
+}
+
+.formSuccess h3 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.formSuccess p {
+    font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+    color: var(--stone);
+    letter-spacing: 0.05em;
+    line-height: 1.9;
+}
+
+/* REVEAL ANIMATION */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.revealDelay1 {
+    transition-delay: 0.1s;
+}
+
+.revealDelay2 {
+    transition-delay: 0.2s;
+}
+
+.revealDelay3 {
+    transition-delay: 0.35s;
+}
+
+@media (max-width: 1024px) {
+    .reservation {
+        flex-direction: column;
+    }
+
+    .reservationLeft,
+    .reservationRight {
+        width: 100%;
+        padding: 5rem 3rem;
+    }
+
+    .reservationLeft {
+        border-right: none;
+        border-bottom: 1px solid rgba(200, 164, 90, 0.08);
+    }
+}

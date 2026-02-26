@@ -1,0 +1,229 @@
+.menuSection {
+    min-height: 100vh;
+    background: var(--carbon);
+    padding: 10rem 8rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.menuSection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(200, 164, 90, 0.2), transparent);
+}
+
+.menuHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 6rem;
+}
+
+.sectionLabel {
+    font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.7em;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.sectionLabel::before {
+    content: '';
+    width: 2rem;
+    height: 1px;
+    background: var(--gold-dim);
+}
+
+.menuTitle {
+    font-size: clamp(2.8rem, 4vw, 5.5rem);
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.menuTitle em {
+    font-style: italic;
+    color: var(--gold);
+}
+
+.menuDesc {
+    font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+    color: var(--stone);
+    letter-spacing: 0.05em;
+    max-width: 22rem;
+    line-height: 1.9;
+    text-align: right;
+}
+
+.menuTabs {
+    display: flex;
+    gap: 0;
+    border-bottom: 1px solid rgba(200, 164, 90, 0.12);
+    margin-bottom: 4rem;
+}
+
+.menuTab {
+    font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--mist);
+    background: none;
+    border: none;
+    padding: 1rem 2.5rem 1.2rem;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.menuTab::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+
+.menuTab.active {
+    color: var(--gold);
+}
+
+.menuTab.active::after {
+    transform: scaleX(1);
+}
+
+.menuTab:hover {
+    color: var(--ivory);
+}
+
+.menuGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+}
+
+.menuItem {
+    padding: 2.5rem 3rem 2.5rem 0;
+    border-bottom: 1px solid rgba(200, 164, 90, 0.06);
+    cursor: default;
+    position: relative;
+    transition: padding-left 0.4s;
+}
+
+.menuItem:hover {
+    padding-left: 1rem;
+}
+
+.menuItem::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    bottom: 50%;
+    width: 2px;
+    background: var(--gold);
+    transition: top 0.4s, bottom 0.4s;
+}
+
+.menuItem:hover::after {
+    top: 20%;
+    bottom: 20%;
+}
+
+.menuItemHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.7rem;
+}
+
+.menuItemName {
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 0.03em;
+}
+
+.menuItemPrice {
+    font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+}
+
+.menuItemDesc {
+    font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+    color: var(--stone);
+    letter-spacing: 0.05em;
+    line-height: 1.9;
+}
+
+.menuItemTag {
+    display: inline-block;
+    margin-top: 0.8rem;
+    font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    border: 1px solid rgba(200, 164, 90, 0.2);
+    padding: 0.3rem 0.8rem;
+}
+
+/* REVEAL ANIMATION */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.revealDelay1 {
+    transition-delay: 0.1s;
+}
+
+.revealDelay2 {
+    transition-delay: 0.2s;
+}
+
+.revealDelay3 {
+    transition-delay: 0.35s;
+}
+
+@media (max-width: 1024px) {
+    .menuSection {
+        padding: 6rem 3rem;
+    }
+
+    .menuGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .menuHeader {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: flex-start;
+    }
+
+    .menuDesc {
+        text-align: left;
+    }
+}

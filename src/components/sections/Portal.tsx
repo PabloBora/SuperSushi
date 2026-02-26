@@ -1,0 +1,35 @@
+"use client";
+
+import { useState } from 'react';
+import clsx from 'clsx';
+import styles from './Portal.module.css';
+
+interface PortalProps {
+    onEnter?: () => void;
+}
+
+export default function Portal({ onEnter }: PortalProps) {
+    const [portalExit, setPortalExit] = useState(false);
+    const [portalDone, setPortalDone] = useState(false);
+
+    const enterPortal = () => {
+        setPortalExit(true);
+        setTimeout(() => {
+            setPortalDone(true);
+            if (onEnter) onEnter();
+        }, 1300);
+    };
+
+    if (portalDone) return null;
+
+    return (
+        <div className={clsx(styles.portal, portalExit && styles.exit)}>
+            <div className={styles.portalGrain} />
+            <div className={styles.portalLogo}>Super Sushi</div>
+            <div className={styles.portalSub}>Alta Gastronomía Japonesa · Ciudad de México</div>
+            <button className={styles.portalEnter} onClick={enterPortal}>
+                Ingresar al Restaurante
+            </button>
+        </div>
+    );
+}
